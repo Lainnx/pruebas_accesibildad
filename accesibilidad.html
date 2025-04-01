@@ -7,10 +7,19 @@
 </head>
 <body>
     
-    <h1>Soy un titulo 1</h1>
-    <p>Soy el primer parrafo</p>
-    <p>Soy el segundo parrafo</p>
-    <p>Soy el tercer parrafo</p>
+    <nav>   <!--antes div role="navigation", ahora nav, menu de navegacion, etiquetas modernas llevan el role incluido-->
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+
+    <h1 tabindex="0">Soy un titulo 1</h1>
+    <p tabindex="0">Soy el primer párrafo</p>   <!--tabindex para que tab coja el elemento-->
+    <p tabindex="0">Soy el segundo párrafo</p>  <!--tabindex 0 se ejecuta en orden secuencial en el orden que esta leido, sino se sigue orden 1>2>3>4>5>0>0>0-->
+    <p tabindex="-1">Soy el tercer párrafo</p>  <!--(-1) para que tab se salte el elemento, puede recibir foco pero no mediante el teclado-->
     <a href="#">Soy un enlace</a>
     <form action="#">
         <label for="nombre">Nombre</label>
